@@ -61,7 +61,7 @@ export UPDATE_ZSH_DAYS=30
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -88,7 +88,20 @@ ZSH_CUSTOM="$ZDOTDIR"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  autojump
+  colored-man-pages
+  command-not-found
+  docker
+#  docker-compose
   git
+# git-auto-fetch
+# pass
+# pep8
+# pip
+# pylint
+  sudo
+  thefuck
+# vault
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -142,6 +155,17 @@ setopt notify
 
 # -------------------------------------
 
+# Custom rebinding to enable both 'sudo' and 'thefuck' plugins:
+bindkey -M emacs '\e\e\e' sudo-command-line
+bindkey -M vicmd '\e\e\e' sudo-command-line
+bindkey -M viins '\e\e\e' sudo-command-line
+
+bindkey -M emacs '\e\e' fuck-command-line
+bindkey -M vicmd '\e\e' fuck-command-line
+bindkey -M viins '\e\e' fuck-command-line
+
+# -------------------------------------
+
 zstyle ':completion:*:ssh:*' hosts off
 
 # -------------------------------------
@@ -150,3 +174,11 @@ zstyle ':completion:*:ssh:*' hosts off
 if [ -f /etc/profile.d/global-environment.sh ]; then
   source /etc/profile.d/global-environment.sh
 fi
+
+# -------------------------------------
+
+# Specific ZSH-only aliases:
+alias cdj='j'
+alias cdjc='jc'
+alias cdjo='jo'
+alias cdjco='jco'
