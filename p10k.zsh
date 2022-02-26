@@ -211,6 +211,8 @@
   # Current directory background color.
   if [[ ${EUID} == 0 ]]; then
     typeset -g POWERLEVEL9K_DIR_BACKGROUND=001
+  elif [[ ${HOSTNAME} == toolbox ]]; then
+    typeset -g POWERLEVEL9K_DIR_BACKGROUND=208
   else
     typeset -g POWERLEVEL9K_DIR_BACKGROUND=004
   fi
