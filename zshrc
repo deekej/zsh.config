@@ -88,21 +88,36 @@ ZSH_CUSTOM="$ZDOTDIR"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  ansible
+  autoenv
   autojump
   colored-man-pages
   command-not-found
-  docker
-#  docker-compose
   git
-# git-auto-fetch
+  git-escape-magic
+  gh
+  jira
+  sudo
+  taskwarrior
+  thefuck
+)
+
+# Additional useful plugins:
+# --------------------------
+# oc
 # pass
 # pep8
 # pip
 # pylint
-  sudo
-  thefuck
-# vault
-)
+# screen
+# systemd
+
+# Additional configuration for plugins:
+# -------------------------------------
+JIRA_URL=https://issues.redhat.com/
+source $ZDOTDIR/autoenv/activate.sh
+
+# -----------------------------------------------------------------------------
 
 source $ZSH/oh-my-zsh.sh
 
