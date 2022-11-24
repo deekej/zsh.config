@@ -115,6 +115,8 @@ plugins=(
 # Additional configuration for plugins:
 # -------------------------------------
 JIRA_URL=https://issues.redhat.com/
+AUTOENV_ENABLE_LEAVE='true'
+
 source $ZDOTDIR/autoenv/activate.sh
 
 # -----------------------------------------------------------------------------
