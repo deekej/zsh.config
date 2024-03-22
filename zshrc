@@ -125,7 +125,7 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.zsh/p10k.zsh.
 # NOTE: The p10k theme is automatically sourced by oh-my-zsh.
-#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # -----------------------------------------------------------------------------
 
