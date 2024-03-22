@@ -1,12 +1,6 @@
 # If not running interactively, then quit:
 [ -z "$PS1" ] && return
 
-# TTY does not support NERD fonts ->> run Bash instead:
-if tty | grep '/dev/tty' &> /dev/null; then
-  exec bash -i
-  return
-fi
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
