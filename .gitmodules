@@ -6,10 +6,6 @@
 	path = themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
 	branch = master
-[submodule "profile.d"]
-	path = profile.d
-	url = git@github.com:deekej/profile.d.git
-	branch = main
 [submodule "autoenv"]
 	path = autoenv
 	url = git@github.com:hyperupcall/autoenv.git
