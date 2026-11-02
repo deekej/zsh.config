@@ -97,8 +97,10 @@ plugins=(
   git-escape-magic
   gh
   jira
+  pass
+  pip
   sudo
-  taskwarrior
+  systemd
   thefuck
 )
 
@@ -111,10 +113,11 @@ plugins=(
 # pylint
 # screen
 # systemd
+# taskwarrior
 
 # Additional configuration for plugins:
 # -------------------------------------
-JIRA_URL=https://issues.redhat.com/
+JIRA_URL=https://redhat.atlassian.net/
 AUTOENV_ENABLE_LEAVE='true'
 
 source $ZDOTDIR/autoenv/activate.sh
